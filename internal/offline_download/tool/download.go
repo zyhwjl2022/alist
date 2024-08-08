@@ -133,7 +133,7 @@ func (t *DownloadTask) Complete() error {
 		files []File
 		err   error
 	)
-	if t.tool.Name() == "pikpak" {
+	if t.tool.Name() == "pikpak" || t.tool.Name() == "aria2" {
 		return nil
 	}
 	if getFileser, ok := t.tool.(GetFileser); ok {
